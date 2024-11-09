@@ -9,11 +9,10 @@ vim.keymap.set("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>w", "<CMD>w<CR><ESC>")
 vim.keymap.set("n", "<leader>q", "<CMD>qa<CR>", { desc = "Quit all" })
 
-vim.keymap.set("i", "<S-CR>", "<ESC>o", { desc = "Insert new line below" })
-
 vim.keymap.set("v", "<", "<gv", { desc = "Better indenting" })
 vim.keymap.set("v", ">", ">gv", { desc = "Better indenting" })
 
 vim.keymap.set({ "i", "n" }, "<ESC>", "<CMD>noh<CR><ESC>", { desc = "Clear search highlights" })
+vim.keymap.set("i", "<S-CR>", "<C-o>o")
 
 vim.keymap.set("n", "<leader>e", "<CMD>Ex<CR>")

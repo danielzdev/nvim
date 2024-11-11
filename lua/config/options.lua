@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 vim.opt.backup = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.confirm = true
+vim.opt.cmdheight = 0
 vim.opt.expandtab = true
 vim.opt.fillchars = { eob = " " }
 vim.opt.ignorecase = true

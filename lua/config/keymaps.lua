@@ -14,5 +14,3 @@ vim.keymap.set("v", ">", ">gv", { desc = "Better indenting" })
 
 vim.keymap.set({ "i", "n" }, "<ESC>", "<CMD>noh<CR><ESC>", { desc = "Clear search highlights" })
 vim.keymap.set("i", "<S-CR>", "<C-o>o")
-
-vim.keymap.set("n", "<leader>e", "<CMD>Ex<CR>")

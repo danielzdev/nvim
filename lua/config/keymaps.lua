@@ -1,16 +1,21 @@
-vim.keymap.set({ "n", "t" }, "<C-h>", "<C-w>h", { desc = "Move to left split" })
-vim.keymap.set({ "n", "t" }, "<C-j>", "<C-w>j", { desc = "Move to below split" })
-vim.keymap.set({ "n", "t" }, "<C-k>", "<C-w>k", { desc = "Move to above split" })
-vim.keymap.set({ "n", "t" }, "<C-l>", "<C-w>l", { desc = "Move to right split" })
+local map = function(key, cmd, desc, mode)
+  mode = mode or "n"
+  vim.keymap.set(mode, key, cmd, { desc = desc })
+end
 
-vim.keymap.set("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Previous buffer" })
-vim.keymap.set("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Next buffer" })
+map("<C-h>", "<C-w>h", "Move to left window")
+map("<C-j>", "<C-w>j", "Move to bottom window")
+map("<C-k>", "<C-w>k", "Move to upper window")
+map("<C-l>", "<C-w>l", "Move to right window")
 
-vim.keymap.set("n", "<leader>w", "<CMD>w<CR><ESC>")
-vim.keymap.set("n", "<leader>q", "<CMD>qa<CR>", { desc = "Quit all" })
+map("<S-h>", "<cmd>bprevious<cr>", "Prev buffer")
+map("<S-l>", "<cmd>bnext<cr>", "Next buffer")
 
-vim.keymap.set("v", "<", "<gv", { desc = "Better indenting" })
-vim.keymap.set("v", ">", ">gv", { desc = "Better indenting" })
+map("n", "<leader>w", "<cmd>w<cr><ESC>", "Save file")
+map("n", "<leader>q", "<cmd>qa<cr>", "Quit neovim")
 
-vim.keymap.set({ "i", "n" }, "<ESC>", "<CMD>noh<CR><ESC>", { desc = "Clear search highlights" })
-vim.keymap.set("i", "<S-CR>", "<C-o>o")
+map("v", "<", "<gv", "Better indenting <-")
+map("v", ">", ">gv", "Better indenting ->")
+
+map("<ESC>", "<cmd>noh<cr><ESC>", "Clear search highlights")
+map("i", "<S-CR>", "<C-o>o", "Insert new line below current")

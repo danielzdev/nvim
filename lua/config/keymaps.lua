@@ -11,14 +11,14 @@ map("<C-l>", "<C-w>l", "Move to right window")
 map("<S-h>", "<cmd>bprevious<cr>", "Prev buffer")
 map("<S-l>", "<cmd>bnext<cr>", "Next buffer")
 
-map("n", "<leader>w", "<cmd>w<cr><ESC>", "Save file")
-map("n", "<leader>q", "<cmd>qa<cr>", "Quit neovim")
+map("<leader>w", "<cmd>w<cr><ESC>", "Save file")
+map("<leader>q", "<cmd>qa<cr>", "Quit neovim")
 
-map("v", "<", "<gv", "Better indenting <-")
-map("v", ">", ">gv", "Better indenting ->")
+map("<", "<gv", "Better indenting <-", "v")
+map(">", ">gv", "Better indenting ->", "v")
 
 map("<ESC>", "<cmd>noh<cr><ESC>", "Clear search highlights")
-map("i", "<S-CR>", "<C-o>o", "Insert new line below current")
+map("<S-CR>", "<C-o>o", "Insert new line below current", "i")
 
 map(",", ",<c-g>u", "add breakpoint on pressing ,")
 map(".", ".<c-g>u", "add breakpoint on pressing .")

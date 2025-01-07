@@ -1,26 +1,41 @@
 vim.g.mapleader = " "
 
-vim.opt.backup = false
-vim.opt.clipboard = "unnamedplus"
-vim.opt.confirm = true
-vim.opt.cmdheight = 0
-vim.opt.expandtab = true
-vim.opt.fillchars = { eob = " " }
-vim.opt.ignorecase = true
-vim.opt.laststatus = 3
-vim.opt.mouse = "a"
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.scrolloff = 15
-vim.opt.shiftwidth = 2
-vim.opt.showmode = false
-vim.opt.signcolumn = "yes"
-vim.opt.smartcase = true
-vim.opt.splitbelow = true
-vim.opt.splitkeep = "screen"
-vim.opt.splitright = true
-vim.opt.swapfile = false
-vim.opt.termguicolors = true
-vim.opt.tabstop = 2
-vim.opt.virtualedit = "block"
-vim.opt.wrap = True
+local opt = vim.opt
+
+opt.clipboard = "unnamedplus"
+opt.completeopt = "menu,menuone,noselect"
+opt.confirm = true
+opt.cursorline = true
+opt.expandtab = true
+opt.fillchars = { eob = " " }
+opt.grepprg = "rg --vimgrep"
+opt.ignorecase = true
+opt.inccommand = "nosplit"
+opt.jumpoptions = "view"
+opt.laststatus = 3
+opt.linebreak = true
+opt.mouse = "a"
+opt.number = true
+opt.pumheight = 10
+opt.relativenumber = true
+opt.ruler = false
+opt.scrolloff = 4
+opt.shiftround = true
+opt.shiftwidth = 2
+opt.showmode = false
+opt.signcolumn = "yes"
+opt.smartcase = true
+-- opt.smoothscroll = true
+opt.splitbelow = true
+opt.splitkeep = "screen"
+opt.splitright = true
+opt.tabstop = 2
+opt.termguicolors = true
+opt.timeoutlen = vim.g.vscode and 1000 or 300
+opt.undofile = true
+opt.undolevels = 10000
+opt.updatetime = 200
+opt.virtualedit = "block"
+opt.winminwidth = 5
+opt.wrap = false
+

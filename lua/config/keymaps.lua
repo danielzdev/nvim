@@ -19,3 +19,7 @@ map("v", ">", ">gv", "Better indenting ->")
 
 map("<ESC>", "<cmd>noh<cr><ESC>", "Clear search highlights")
 map("i", "<S-CR>", "<C-o>o", "Insert new line below current")
+
+map(",", ",<c-g>u", "add breakpoint on pressing ,")
+map(".", ".<c-g>u", "add breakpoint on pressing .")
+map(";", ";<c-g>u", "add breakpoint on pressing ;")

@@ -23,6 +23,7 @@ return {
         map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
         map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
         map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+        map("<leader>ld", vim.diagnostic.open_float, "Show diagnostics")
         map("<leader>lr", vim.lsp.buf.rename, "[R]e[n]ame")
         map("<leader>ls", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
       end,
@@ -34,7 +35,7 @@ return {
     for type, icon in pairs(signs) do
       diagnostic_signs[vim.diagnostic.severity[type]] = icon
     end
-    vim.diagnostic.config { signs = { text = diagnostic_signs } }
+    vim.diagnostic.config({ signs = { text = diagnostic_signs } })
 
     -- Disable semantic tokens
     local function disable_semantic_tokens(client, _)
@@ -44,7 +45,7 @@ return {
     end
 
     -- Make capabilites for blink-cmp
-    local capabilities = require('blink.cmp').get_lsp_capabilities()
+    local capabilities = require("blink.cmp").get_lsp_capabilities()
 
     local servers = {
       clangd = {},
@@ -70,9 +71,9 @@ return {
     vim.list_extend(ensure_installed, {
       "stylua",
     })
-    require("mason-tool-installer").setup { ensure_installed = ensure_installed }
+    require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-    require("mason-lspconfig").setup {
+    require("mason-lspconfig").setup({
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
@@ -82,7 +83,6 @@ return {
           }))
         end,
       },
-    }
+    })
   end,
 }
-

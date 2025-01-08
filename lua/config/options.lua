@@ -36,4 +36,3 @@ opt.updatetime = 200
 opt.virtualedit = "block"
 opt.winminwidth = 5
 opt.wrap = false
-

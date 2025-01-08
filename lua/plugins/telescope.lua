@@ -24,7 +24,7 @@ return {
             require("telescope.themes").get_dropdown(),
           },
         },
-      }
+      },
     })
 
     pcall(require("telescope").load_extension, "fzf")
@@ -35,7 +35,7 @@ return {
       vim.keymap.set(mode, keymap, cmd, { desc = desc })
     end
 
-    local builtin = require "telescope.builtin"
+    local builtin = require("telescope.builtin")
     map("<leader><leader>", builtin.find_files, "Find files")
     map("<leader>ff", builtin.find_files, "Find files (alt key)")
     map("<leader>fh", builtin.help_tags, "Find help")

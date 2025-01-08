@@ -26,6 +26,7 @@ opt.smartcase = true
 opt.splitbelow = true
 opt.splitkeep = "screen"
 opt.splitright = true
+vim.opt.signcolumn = "yes"
 opt.tabstop = 2
 opt.termguicolors = true
 opt.timeoutlen = 300

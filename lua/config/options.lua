@@ -22,7 +22,6 @@ opt.scrolloff = 4
 opt.shiftround = true
 opt.shiftwidth = 2
 opt.showmode = false
-opt.signcolumn = "yes"
 opt.smartcase = true
 opt.splitbelow = true
 opt.splitkeep = "screen"

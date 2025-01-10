@@ -1,15 +1,9 @@
-local map = function(key, cmd, desc, mode)
-  mode = mode or "n"
-  vim.keymap.set(mode, key, cmd, { desc = desc })
-end
+local map = require("utils.safe_keymap").safe_keymap
 
 map("<C-h>", "<C-w>h", "Move to left window")
 map("<C-j>", "<C-w>j", "Move to bottom window")
 map("<C-k>", "<C-w>k", "Move to upper window")
 map("<C-l>", "<C-w>l", "Move to right window")
-
-map("<S-h>", "<cmd>bprevious<cr>", "Prev buffer")
-map("<S-l>", "<cmd>bnext<cr>", "Next buffer")
 
 map("<leader>w", "<cmd>w<cr><ESC>", "Save file")
 map("<leader>q", "<cmd>qa<cr>", "Quit neovim")

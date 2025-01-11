@@ -63,7 +63,7 @@ return {
             },
             diagnostics = {
               disable = { "missing-fields" },
-              globals = { "vim" },
+              globals = { "vim", "Snacks" },
             },
           },
         },

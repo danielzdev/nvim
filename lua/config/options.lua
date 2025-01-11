@@ -5,7 +5,7 @@ local opt = vim.opt
 opt.clipboard = "unnamedplus"
 opt.completeopt = "menu,menuone,noselect"
 opt.confirm = true
-opt.cursorline = true
+opt.cmdheight = 0
 opt.expandtab = true
 opt.fillchars = { eob = " " }
 opt.grepprg = "rg --vimgrep"
@@ -26,7 +26,7 @@ opt.smartcase = true
 opt.splitbelow = true
 opt.splitkeep = "screen"
 opt.splitright = true
-vim.opt.signcolumn = "yes"
+opt.signcolumn = "yes"
 opt.tabstop = 4
 opt.termguicolors = true
 opt.timeoutlen = 300

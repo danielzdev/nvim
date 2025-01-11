@@ -2,7 +2,16 @@ return {
   "ibhagwan/fzf-lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    require("fzf-lua").setup({})
+    require("fzf-lua").setup({
+      winopts = {
+        backdrop = 100,
+      },
+      keymap = {
+        fzf = {
+          ["ctrl-q"] = "select-all+accept",
+        },
+      },
+    })
     local map = require("utils.safe_keymap").safe_keymap
 
     local fzf = require("fzf-lua")

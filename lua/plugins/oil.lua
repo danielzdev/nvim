@@ -2,7 +2,7 @@ return {
   "stevearc/oil.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
-    { "<leader>o", "<cmd>Oil<cr>", "Open oil" },
+    { "<leader>o", "<cmd>Oil<cr>", desc = "Open oil" },
   },
   opts = {
     use_default_keymaps = false,

@@ -11,6 +11,7 @@ return {
     map("<leader>fh", fzf.helptags, "Find help tags")
     map("<leader>ff", fzf.files, "Find files fzf")
     map("<leader>fw", fzf.grep_cword, "Find word (under cursor)")
+    map("<leader>fk", fzf.keymaps, "Find keymaps")
     map("<leader>fg", fzf.live_grep, "Live grep")
     map("<leader>fs", fzf.git_status, "Search git status")
 

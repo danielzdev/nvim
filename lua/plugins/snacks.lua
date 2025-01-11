@@ -24,6 +24,7 @@ return {
     { "<leader>c", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
     { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
     { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
+    { "<leader>bo", function() Snacks.bufdelete.other() end, desc = "Delete all other buffers" },
     { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "<leader>gl", function() Snacks.lazygit.log() end, desc = "Lazygit Log (cwd)" },

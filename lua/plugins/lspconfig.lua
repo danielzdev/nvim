@@ -53,8 +53,8 @@ return {
     local capabilities = require("blink.cmp").get_lsp_capabilities()
 
     local servers = {
+      basedpyright = {},
       clangd = {},
-      pyright = {},
       zls = {},
       lua_ls = {
         settings = {

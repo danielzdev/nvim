@@ -17,7 +17,6 @@ map("<S-CR>", "<C-o>o", "Insert new line below current", "i")
 map(",", ",<c-g>u", "add breakpoint on pressing ,", "i")
 map(".", ".<c-g>u", "add breakpoint on pressing .", "i")
 map(";", ";<c-g>u", "add breakpoint on pressing ;", "i")
-map("<leader>tt", "<cmd>Floaterminal<cr>", "Open floating terminal")
 
 map("<esc><esc>", "<c-\\><c-n>", "Exit terminal mode with x2 ESC", "t")
 map("<leader>tt", require("utils.terminal").toggle_terminal, "Toggle terminal")

@@ -14,9 +14,9 @@ return {
     statuscolumn = { enabled = true },
     styles = {
       notification = {
-        wo = { wrap = true }
-      }
-    }
+        wo = { wrap = true },
+      },
+    },
   },
   keys = {
     { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },

@@ -5,13 +5,13 @@ return {
   opts = {
     bigfile = { enabled = true },
     indent = { enabled = true },
+    lazygit = { enabled = true },
     notifier = {
       enabled = true,
       timeout = 2000,
     },
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
-    lazygit = { enabled = true },
     styles = {
       notification = {
         wo = { wrap = true }

@@ -29,7 +29,7 @@ local function create_floating_window(opts)
     col = col,
     row = row,
     style = "minimal",
-    border = "rounded",
+    border = "solid",
   }
 
   -- Create the floating window

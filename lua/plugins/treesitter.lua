@@ -17,6 +17,7 @@ return {
         "toml",
         "vim",
         "vimdoc",
+        "zig",
       },
       sync_install = false,
       highlight = {

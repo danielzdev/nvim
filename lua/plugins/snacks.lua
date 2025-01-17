@@ -5,7 +5,10 @@ return {
   opts = {
     bigfile = { enabled = true },
     indent = { enabled = true },
-    lazygit = { enabled = true },
+    lazygit = {
+      configure = false,
+      enabled = true,
+    },
     notifier = {
       enabled = true,
       timeout = 2000,

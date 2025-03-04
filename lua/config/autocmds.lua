@@ -94,3 +94,13 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
+
+-- Disable automatic commenting on newline
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("disable_autocomment"),
+  pattern = "*",
+  callback = function()
+    vim.opt.formatoptions = "tcqj"
+  end,
+  desc = "Disable automatic commenting on newline",
+})

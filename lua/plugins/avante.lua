@@ -5,6 +5,9 @@ return {
   version = false,
   opts = {
     provider = "claude",
+    windows = {
+      width = 45;
+    }
   },
   build = "make",
   dependencies = {

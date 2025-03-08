@@ -5,7 +5,7 @@ map("<C-j>", "<C-w>j", "Move to bottom window")
 map("<C-k>", "<C-w>k", "Move to upper window")
 map("<C-l>", "<C-w>l", "Move to right window")
 
-map("<leader>w", "<cmd>silent! w<cr><ESC>", "Save file")
+map("<leader>w", "<cmd>w<cr><ESC>", "Save file")
 map("<leader>q", "<cmd>qa<cr>", "Quit neovim")
 
 map("<", "<gv", "Better indenting <-", "v")

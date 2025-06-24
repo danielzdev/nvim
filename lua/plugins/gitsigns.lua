@@ -39,13 +39,12 @@ return {
         end
       end, "Prev Hunk")
 
-      map({ "n", "v" }, "<leader>gs", "<CMD>Gitsigns stage_hunk<CR>", "Stage Hunk")
-      map({ "n", "v" }, "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>", "Unstage Hunk")
-      map("n", "<leader>gS", gs.stage_buffer, "Stage Buffer")
-      map("n", "<leader>gu", gs.undo_stage_hunk, "Undo Stage Hunk")
-      map("n", "<leader>gR", gs.reset_buffer, "Reset Buffer")
+      map({ "n", "v" }, "<leader>ghs", "<CMD>Gitsigns stage_hunk<CR>", "Stage Hunk")
+      map({ "n", "v" }, "<leader>ghr", "<CMD>Gitsigns reset_hunk<CR>", "Unstage Hunk")
+      map("n", "<leader>ghS", gs.stage_buffer, "Stage Buffer")
+      map("n", "<leader>ghu", gs.undo_stage_hunk, "Undo Stage Hunk")
+      map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
       map("n", "<leader>gp", gs.preview_hunk_inline, "Preview Hunk Inline")
-      map("n", "<leader>gd", gs.diffthis, "Diff This")
     end,
   },
 }

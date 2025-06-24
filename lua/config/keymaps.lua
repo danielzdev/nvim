@@ -20,3 +20,6 @@ map(";", ";<c-g>u", "add breakpoint on pressing ;", "i")
 
 map("<esc><esc>", "<c-\\><c-n>", "Exit terminal mode with x2 ESC", "t")
 map("<leader>tt", require("utils.terminal").toggle_terminal, "Toggle terminal")
+
+map("<S-h>", "<cmd>bprev<cr>", "Prev buffer")
+map("<S-l>", "<cmd>bnext<cr>", "Next buffer")

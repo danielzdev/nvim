@@ -21,19 +21,17 @@ return {
           vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
         end
 
-        local fzf = require("fzf-lua")
-
-        map("gd", fzf.lsp_definitions, "Goto definition")
-        map("gr", fzf.lsp_references, "Goto references")
-        map("gi", fzf.lsp_implementations, "Goto implementation")
-        map("gD", fzf.lsp_declarations, "Goto declaration")
-        map("<leader>D", fzf.lsp_typedefs, "Goto type definition")
-        map("<leader>sd", fzf.lsp_document_symbols, "Document symbols")
-        map("<leader>sw", fzf.lsp_workspace_symbols, "Workspace symbols")
-
-        map("<leader>la", vim.lsp.buf.code_action, "Code actions", { "n", "x" })
-        map("<leader>ld", vim.diagnostic.open_float, "Show diagnostics")
-        map("<leader>lr", vim.lsp.buf.rename, "Rename symbol")
+        -- map("gd", fzf.lsp_definitions, "Goto definition")
+        -- map("gr", fzf.lsp_references, "Goto references")
+        -- map("gi", fzf.lsp_implementations, "Goto implementation")
+        -- map("gD", fzf.lsp_declarations, "Goto declaration")
+        -- map("<leader>D", fzf.lsp_typedefs, "Goto type definition")
+        -- map("<leader>sd", fzf.lsp_document_symbols, "Document symbols")
+        -- map("<leader>sw", fzf.lsp_workspace_symbols, "Workspace symbols")
+        --
+        -- map("<leader>la", vim.lsp.buf.code_action, "Code actions", { "n", "x" })
+        -- map("<leader>ld", vim.diagnostic.open_float, "Show diagnostics")
+        -- map("<leader>lr", vim.lsp.buf.rename, "Rename symbol")
       end,
     })
 

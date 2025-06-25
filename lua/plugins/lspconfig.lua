@@ -53,6 +53,7 @@ return {
     local servers = {
       clangd = {},
       pyright = {},
+      ts_ls = {},
       zls = {},
       lua_ls = {
         settings = {

@@ -6,7 +6,6 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
-    indent = { enabled = true },
     input = { enabled = true },
     notifier = { enabled = true, timeout = 3000 },
     picker = { enabled = true },

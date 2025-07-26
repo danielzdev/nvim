@@ -1,22 +1,22 @@
 return {
-  "max397574/better-escape.nvim",
+  'max397574/better-escape.nvim',
   config = function()
-    require("better_escape").setup({
+    require('better_escape').setup({
       default_mappings = false,
       mappings = {
         i = {
           j = {
-            k = "<Esc>",
+            k = '<Esc>',
           },
         },
         v = {
           j = {
-            k = "<Esc>",
+            k = '<Esc>',
           },
         },
         s = {
           j = {
-            k = "<Esc>",
+            k = '<Esc>',
           },
         },
       },

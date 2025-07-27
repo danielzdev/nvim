@@ -1,3 +1,6 @@
+-- Globals
+vim.g.zig_fmt_parse_errors = 0 -- This is needed, cause for whatever god forsaken reason neovim opens the qfl when using zig/zls
+
 vim.g.mapleader = ' '
 
 vim.opt.clipboard = 'unnamedplus'

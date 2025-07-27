@@ -46,10 +46,8 @@ return {
       map('v', '<leader>gr', function() gs.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') }) end)
       map('n', '<leader>gS', gs.stage_buffer)
       map('n', '<leader>gR', gs.reset_buffer)
-      map('n', '<leader>gp', gs.preview_hunk)
-      map('n', '<leader>gi', gs.preview_hunk_inline)
+      map('n', '<leader>gp', gs.preview_hunk_inline)
       map('n', '<leader>gb', function() gs.blame_line({ full = true }) end)
-      map('n', '<leader>gd', gs.diffthis)
     end,
   },
 }

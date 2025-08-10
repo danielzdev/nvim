@@ -12,10 +12,11 @@ return {
       { 's', group = '[S]urround' },
       { '<leader>b', group = '[B]uffef' },
       { '<leader>f', group = '[F]ind' },
+      { '<leader>g', group = '[G]it' },
       { '<leader>l', group = '[L]sp' },
+      { '<leader>u', group = '[U]Toggle' },
       { '<leader>s', group = '[S]earch' },
-      { '<leader>u', group = '[T]oggle' },
-      { '<leader>g', group = 'Git' },
+      { '<leader>x', group = '[T]rouble' },
     },
   },
 }

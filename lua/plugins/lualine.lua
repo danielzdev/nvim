@@ -3,7 +3,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons', 'lewis6991/gitsigns.nvim' },
   event = 'VeryLazy',
   config = function()
-    local ignored_ft = { ['neo-tree'] = true, Outline = true, alpha = true }
+    local ignored_ft = { ['neo-tree'] = true, Outline = true }
     local last_real_buf = vim.api.nvim_get_current_buf()
 
     vim.api.nvim_create_autocmd({ 'BufEnter', 'WinEnter' }, {
@@ -54,6 +54,13 @@ return {
         lualine_c = {
           { 'branch', icon = '' },
           {
+            'diagnostics',
+            symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
+            update_in_insert = true,
+          },
+        },
+        lualine_x = {
+          {
             'diff',
             source = diff_source,
             symbols = {
@@ -62,12 +69,6 @@ return {
               removed  = '%#GitDeleteIcon# %*',
             },
             colored = false,
-          },
-        },
-        lualine_x = {
-          { 'diagnostics',
-            symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
-            update_in_insert = true,
           },
         },
         lualine_y = { clients_lsp },

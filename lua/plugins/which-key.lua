@@ -15,7 +15,7 @@ return {
       { '<leader>l', group = '[L]sp' },
       { '<leader>s', group = '[S]earch' },
       { '<leader>u', group = '[T]oggle' },
-      { '<leader>g', group = 'Git', mode = { 'n', 'v' } },
+      { '<leader>g', group = 'Git' },
     },
   },
 }

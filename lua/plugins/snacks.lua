@@ -29,6 +29,7 @@ return {
     { '<leader>/', function() Snacks.picker.grep() end, desc = 'Grep' },
     { '<leader><leader>', function() Snacks.picker.files() end, desc = 'Find Files' },
     { '<leader>fk', function() Snacks.picker.keymaps() end, desc = 'Keymaps' },
+    { '<leader>fg', function() Snacks.picker.git_status() end, desc = 'Git status' },
     { '<leader>gL', function() Snacks.picker.git_log_line() end, desc = 'Git Log Line' },
     { '<leader>gf', function() Snacks.picker.git_log_file() end, desc = 'Git Log File' },
     { '<leader>fw', function() Snacks.picker.grep_word() end, desc = 'Visual selection or word', mode = { 'n', 'x' } },

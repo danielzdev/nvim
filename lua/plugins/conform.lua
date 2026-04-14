@@ -1,8 +1,8 @@
 return {
-  'stevearc/conform.nvim',
-  event = { 'BufReadPre', 'BufNewFile' },
+  "stevearc/conform.nvim",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
-    require('conform').setup({
+    require("conform").setup({
       notify_on_error = false,
       format_on_save = function(bufnr)
         local disable_filetypes = { c = true, cpp = true, lua = true }
@@ -12,31 +12,31 @@ return {
           if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
             return
           end
-          return { timeout_ms = 500, lsp_format = 'fallback' }
+          return { timeout_ms = 500, lsp_format = "fallback" }
         end
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
+        lua = { "stylua" },
       },
     })
 
-    vim.api.nvim_create_user_command('AutoFormat', function(args)
+    vim.api.nvim_create_user_command("AutoFormat", function(args)
       if args.bang then
         vim.g.disable_autoformat = not vim.g.disable_autoformat
-        local message = 'Global format on save ' .. (vim.g.disable_autoformat and 'off' or 'on')
+        local message = "Global format on save " .. (vim.g.disable_autoformat and "off" or "on")
         Snacks.notify(message)
       else
         vim.b.disable_autoformat = not vim.b.disable_autoformat
-        local message = 'Buffer format on save ' .. (vim.b.disable_autoformat and 'off' or 'on')
+        local message = "Buffer format on save " .. (vim.b.disable_autoformat and "off" or "on")
         Snacks.notify(message)
       end
     end, {
-    desc = 'Toggle format on save globally or for the current buffer',
+    desc = "Toggle format on save globally or for the current buffer",
     bang = true,
   })
 
-  vim.keymap.set('', '<leader>lf', function() require('conform').format({ async = true, lsp_format = 'fallback' }) end, { desc = 'Format buffer' })
-  vim.keymap.set('n', '<leader>uf', '<cmd>AutoFormat<cr>', { silent = true, desc = 'Toggle format on save (buffer)' })
-  vim.keymap.set('n', '<leader>uF', '<cmd>AutoFormat!<cr>', { silent = true, desc = 'Toggle format on save (global)' })
+  vim.keymap.set("", "<leader>lf", function() require("conform").format({ async = true, lsp_format = "fallback" }) end, { desc = "Format buffer" })
+  vim.keymap.set("n", "<leader>uf", "<cmd>AutoFormat<cr>", { silent = true, desc = "Toggle format on save (buffer)" })
+  vim.keymap.set("n", "<leader>uF", "<cmd>AutoFormat!<cr>", { silent = true, desc = "Toggle format on save (global)" })
 end,
 }

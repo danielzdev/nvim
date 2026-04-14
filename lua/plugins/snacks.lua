@@ -30,15 +30,13 @@ return {
     { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader><leader>", function() Snacks.picker.files() end, desc = "Find Files" },
     { "<leader>fc", function() Snacks.picker.command_history() end, desc = "Command History" },
+    { "<leader>fh", function() Snacks.picker.help() end, desc = "Help Pages" },
+    { "<leader>fk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
     { "<leader>fm", function() Snacks.picker.marks() end, desc = "Marks" },
     { "<leader>fn", function() Snacks.notifier.show_history() end, desc = "Notification History" },
     { "<leader>fs", function() Snacks.picker.git_status() end, desc = "Git status" },
     { "<leader>fw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
     { "<leader>fu", function() Snacks.picker.undo() end, desc = "Undo History" },
-
-    -- Search
-    { "<leader>sh", function() Snacks.picker.help() end, desc = "Help Pages" },
-    { "<leader>sk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
 
     -- Buffer
     { "<leader>c", function() Snacks.bufdelete() end, desc = "Delete Buffer" },

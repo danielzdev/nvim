@@ -8,6 +8,9 @@ map('<C-j>', '<C-w>j', 'Move to bottom window')
 map('<C-k>', '<C-w>k', 'Move to upper window')
 map('<C-l>', '<C-w>l', 'Move to right window')
 
+map('<ScrollWheelRight>', '<Nop>', 'Disable horizontal scroll right', {'n', 'v', 'i'})
+map('<ScrollWheelLeft>', '<Nop>', 'Disable horizontal scroll left', {'n', 'v', 'i'})
+
 map('<leader>w', '<cmd>w<cr><ESC>', 'Save file')
 map('<leader>qq', '<cmd>qa<cr>', 'Quit neovim')
 

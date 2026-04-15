@@ -9,6 +9,14 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Remove auto-comment on new lines (persists across ftplugins)
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("formatoptions"),
+  callback = function()
+    vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+  end,
+})
+
 -- Check if we need to reload the file when it changed
 vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
   group = augroup("checktime"),

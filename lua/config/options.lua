@@ -1,12 +1,10 @@
 vim.g.mapleader = " "
 
 vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.confirm = true
 vim.opt.cmdheight = 0
 vim.opt.expandtab = true
 vim.opt.fillchars = { eob = " " }
-vim.opt.formatoptions:remove({ "c", "r", "o" })
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.ignorecase = true
 vim.opt.inccommand = "nosplit"
@@ -28,7 +26,6 @@ vim.opt.splitright = true
 vim.opt.signcolumn = "yes"
 vim.opt.swapfile = false
 vim.opt.tabstop = 2
-vim.opt.termguicolors = true
 vim.opt.timeoutlen = 300
 vim.opt.undofile = true
 vim.opt.undolevels = 10000

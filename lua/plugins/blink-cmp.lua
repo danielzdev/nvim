@@ -17,7 +17,6 @@ return {
       },
       opts = {},
     },
-    "folke/lazydev.nvim",
   },
   --- @module 'blink.cmp'
   opts = {

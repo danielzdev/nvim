@@ -9,9 +9,10 @@ return {
     require("mason-tool-installer").setup({
       ensure_installed = {
         -- Language servers
-        "clangd",
-        "lua_ls",
-        "jdtls",
+        "clangd", -- C++
+        "lua_ls", -- Lua
+        "jdtls",  -- Java
+        "ty",     -- Python
 
         -- Formatters
         "stylua",

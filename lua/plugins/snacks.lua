@@ -26,16 +26,18 @@ return {
     },
   },
   keys = {
+    -- Search
+    { "<leader>/", function() Snacks.picker.grep({ regex = false }) end, desc = "Grep (literal)" },
+    { "<leader>fr", function() Snacks.picker.grep() end, desc = "Grep (regex)" },
+    { "<leader>fw", function() Snacks.picker.grep_word() end, desc = "Grep word under cursor", mode = { "n", "x" } },
+
     -- Find
-    { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
-    { "<leader><leader>", function() Snacks.picker.files() end, desc = "Find Files" },
     { "<leader>fc", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>fh", function() Snacks.picker.help() end, desc = "Help Pages" },
     { "<leader>fk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
     { "<leader>fm", function() Snacks.picker.marks() end, desc = "Marks" },
     { "<leader>fn", function() Snacks.notifier.show_history() end, desc = "Notification History" },
     { "<leader>fs", function() Snacks.picker.git_status() end, desc = "Git status" },
-    { "<leader>fw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
     { "<leader>fu", function() Snacks.picker.undo() end, desc = "Undo History" },
 
     -- Buffer
@@ -56,7 +58,7 @@ return {
         Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
         Snacks.toggle.diagnostics():map("<leader>ud")
         Snacks.toggle.line_number():map("<leader>ul")
-        Snacks.toggle.option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 }) :map("<leader>uc")
+        Snacks.toggle.option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 }):map("<leader>uc")
         Snacks.toggle.treesitter():map("<leader>uT")
         Snacks.toggle.option("background", { off = "light", on = "dark", name = "Dark Background" }):map("<leader>ub")
         Snacks.toggle.inlay_hints():map("<leader>uh")
@@ -66,3 +68,4 @@ return {
     })
   end,
 }
+
